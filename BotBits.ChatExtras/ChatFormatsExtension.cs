@@ -1,6 +1,6 @@
 ﻿namespace BotBits.ChatExtras
 {
-    public sealed class ChatExtrasExtension : Extension<ChatExtrasExtension>
+    public sealed class ChatFormatsExtension : Extension<ChatFormatsExtension>
     {
         protected override void Initialize(BotBitsClient client, object args)
         {

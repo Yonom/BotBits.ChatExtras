@@ -16,19 +16,7 @@ namespace BotBits.ChatExtras
         {
         }
 
-        [EventListener(EventPriority.High)]
-        private void OnInit(InitEvent e)
-        {
-            e.Player.SetClient(this.BotBits);
-        }
-
-        [EventListener(EventPriority.High)]
-        private void OnJoin(JoinEvent e)
-        {
-            e.Player.SetClient(this.BotBits);            
-        }
-
-        [EventListener(EventPriority.High)]
+        [EventListener]
         private void OnCommand(CommandEvent e)
         {
             var source = e.Source as PlayerInvokeSource;
@@ -42,7 +30,7 @@ namespace BotBits.ChatExtras
             }
         }
 
-        [EventListener(EventPriority.Highest)]
+        [EventListener(GlobalPriority.BeforeMost)]
         private void OnQueueChat(QueueChatEvent e)
         {
             var pm = e.Message.StartsWith("/pm ", StringComparison.OrdinalIgnoreCase);

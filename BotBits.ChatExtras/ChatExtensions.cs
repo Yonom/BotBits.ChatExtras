@@ -14,16 +14,5 @@ namespace BotBits.ChatExtras
         {
             chat.Say(ChatEx.SendPrefix + message, args);
         }
-
-        public static void Reply(this IChat chat, Player player, string message)
-        {
-            player.Reply(message);
-        }
-
-        [StringFormatMethod("args")]
-        public static void Reply(this IChat chat, Player player, string message, params object[] args)
-        {
-            player.Reply(message, args);
-        }
     }
 }

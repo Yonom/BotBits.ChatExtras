@@ -9,7 +9,7 @@ namespace BotBits.ChatExtras.Demo
         static void Main()
         {
             var bot = new BotBitsClient();
-            ChatExtrasExtension.LoadInto(bot, new CakeChatSyntaxProvider("Bot"));
+            ChatFormatsExtension.LoadInto(bot, new CakeChatSyntaxProvider("Bot"));
             CommandsExtension.LoadInto(bot, '!');
             ConnectionManager.Of(bot).EmailLogin("guest1@tbp.com", "guest").JoinRoom("PWAARLDluVa0I");
             InitEvent.Of(bot).WaitOneAsync().Wait();
