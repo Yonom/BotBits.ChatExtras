@@ -43,6 +43,7 @@ namespace BotBits.ChatExtras
                 var args = e.Message.Split(' ');
                 var target = args.Skip(1).FirstOrDefault();
                 var message = String.Join(" ", args.Skip(2));
+                if (String.IsNullOrEmpty(message)) message = "Tsk Tsk Tsk";
 
                 e.Message = pm 
                     ? this.SyntaxProvider.ApplyPrivateMessageSyntax(target, message) 
