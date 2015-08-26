@@ -8,9 +8,9 @@
             ChatEx.Of(client).SyntaxProvider = syntaxProvider;
         }
 
-        public static void LoadInto(BotBitsClient client, IChatSyntaxProvider syntaxProvider = null)
+        public static bool LoadInto(BotBitsClient client, IChatSyntaxProvider syntaxProvider = null)
         {
-            LoadInto(client, (object)syntaxProvider);
+            return LoadInto(client, (object)syntaxProvider);
         }
     }
 }
