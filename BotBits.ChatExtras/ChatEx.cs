@@ -55,7 +55,7 @@ namespace BotBits.ChatExtras
             }
             else 
             {
-                e.Message = SyntaxProvider.ApplyChatSyntax(e.Message);
+                e.Message = this.SyntaxProvider.ApplyChatSyntax(e.Message);
             }
         }
 

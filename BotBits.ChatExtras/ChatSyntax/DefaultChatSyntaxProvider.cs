@@ -14,12 +14,12 @@ namespace BotBits.ChatExtras
 
         public string ApplyPrivateMessageSyntax(string playername, string chat)
         {
-            return string.Format("/pm {0} {1}", playername, chat);
+            return $"/pm {playername} {chat}";
         }
 
         public virtual string ApplyKickSyntax(string playerName, string reason)
         {
-            return string.Format("/kick {0} {1}", playerName, reason);
+            return $"/kick {playerName} {reason}";
         }
     }
 }

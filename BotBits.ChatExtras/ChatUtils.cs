@@ -14,8 +14,7 @@ namespace BotBits.ChatExtras
 
             if (!isCommand)
             {
-                input = Regex.Replace(input, @"([\?\!]{2})[\?\!]+", "$1",
-                    RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+                input = Regex.Replace(input, @"([\?\!]{2})[\?\!]+", "$1", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
                 input = Regex.Replace(input, @"\.{4,}", "...", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
                 bool replaced = true;
