@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design;
 using System.Linq;
 using BotBits.Commands;
 using BotBits.Events;
@@ -14,9 +15,15 @@ namespace BotBits.ChatExtras
         [Obsolete("Invalid to use \"new\" on this class. Use the static .Of(botBits) method instead.", true)]
         public ChatEx()
         {
+            if (CommandsExtensionServices.IsAvailable())
+                this.EnableCommandsExtensionSupport();
         }
 
-        [EventListener]
+        private void EnableCommandsExtensionSupport()
+        {
+            CommandEvent.Of(this.BotBits).Bind(this.OnCommand);
+        }
+
         private void OnCommand(CommandEvent e)
         {
             var source = e.Source as PlayerInvokeSource;

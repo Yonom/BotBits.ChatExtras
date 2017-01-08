@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotBits.ChatExtras", "BotBits.ChatExtras\BotBits.ChatExtras.csproj", "{4D54442C-EE62-49C1-9FC0-800EC92D564B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotBits.ChatExtras.Demo", "BotBits.ChatExtras.Demo\BotBits.ChatExtras.Demo.csproj", "{726806E0-5D8C-4B72-B805-75C34C45E810}"
 EndProject
-Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "BotBits.ChatExtras.NuGet", "BotBits.ChatExtras.NuGet\BotBits.ChatExtras.NuGet.nuproj", "{1F3E771E-34BA-48AB-833F-B518F3495D69}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget", "Nuget", "{E18F1CB9-080A-4CAA-941F-E5AF01D5B696}"
+EndProject
+Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "BotBits.ChatExtras", "Nuget\BotBits.ChatExtras\BotBits.ChatExtras.nuproj", "{1F3E771E-34BA-48AB-833F-B518F3495D69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +32,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1F3E771E-34BA-48AB-833F-B518F3495D69} = {E18F1CB9-080A-4CAA-941F-E5AF01D5B696}
 	EndGlobalSection
 EndGlobal
