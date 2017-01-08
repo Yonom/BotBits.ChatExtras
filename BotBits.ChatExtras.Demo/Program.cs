@@ -11,7 +11,7 @@ namespace BotBits.ChatExtras.Demo
             var bot = new BotBitsClient();
             ChatFormatsExtension.LoadInto(bot, new CakeChatSyntaxProvider("Bot"));
             CommandsExtension.LoadInto(bot, '!');
-            Login.Of(bot).WithEmail("guest1@tbp.com", "guest").JoinRoom("PWAARLDluVa0I");
+            Login.Of(bot).AsGuest().JoinRoom("PW01");
             InitEvent.Of(bot).WaitOneAsync().Wait();
             JoinCompleteEvent.Of(bot).WaitOneAsync().Wait();
             Thread.Sleep(Timeout.Infinite);

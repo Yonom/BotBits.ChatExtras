@@ -16,7 +16,7 @@ namespace BotBits.ChatExtras
         public ChatEx()
         {
             if (CommandsExtensionServices.IsAvailable())
-                this.EnableCommandsExtensionSupport();
+                this.InitializeFinish += (s, e) => this.EnableCommandsExtensionSupport();
         }
 
         private void EnableCommandsExtensionSupport()
